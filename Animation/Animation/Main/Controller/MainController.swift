@@ -26,7 +26,6 @@ class MainController: UIViewController {
         }
         
         for dict in itemDatas {
-            print(dict)
             let item = Item(dict: dict as! Dictionary<String, String>)
             datas.append(item)
         }
@@ -84,8 +83,3 @@ extension MainController: UITableViewDelegate {
         self.navigationController?.pushViewController(viewControllerClass.init(), animated: true)
     }
 }
-
-
-
-
-
