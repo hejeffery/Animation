@@ -68,7 +68,6 @@ extension MainController: UITableViewDataSource {
         cell.item = datas[indexPath.row]
         return cell
     }
-    
 }
 
 // MARK: - UITableViewDelegate

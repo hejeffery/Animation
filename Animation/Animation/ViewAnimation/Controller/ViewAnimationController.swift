@@ -15,7 +15,7 @@ class ViewAnimationController: UIViewController {
     
     private lazy var purpleView: UIView = {
         let purpleView = UIView()
-        purpleView.frame = CGRect(x: 0, y: 100, width: 60, height: 60)
+        purpleView.frame = CGRect(x: 10, y: 130, width: 60, height: 60)
         purpleView.backgroundColor = UIColor.purple
         return purpleView
     }()
@@ -40,9 +40,18 @@ class ViewAnimationController: UIViewController {
     
     private lazy var springButton: UIButton = {
         let springButton = self.createButton("spring")
-        springButton.frame = CGRect(x: self.transformButton.frame.maxX + 10, y: 10, width: 80, height: 40)
+        springButton.frame = CGRect(x: 10, y: self.transformButton.frame.maxY + 10, width: 80, height: 40)
         return springButton
     }()
+    
+    private lazy var transitionButton: UIButton = {
+        let transitionButton = self.createButton("transition")
+        transitionButton.frame = CGRect(x: self.springButton.frame.maxX + 10, y: self.springButton.frame.origin.y, width: 80, height: 40)
+        return transitionButton
+    }()
+    
+    var transitionNewView: UIView!
+    
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -51,11 +60,7 @@ class ViewAnimationController: UIViewController {
         navigationController?.navigationBar.isTranslucent = false
         view.backgroundColor = UIColor.white
         
-        view.addSubview(moveButton)
-        view.addSubview(colorButton)
-        view.addSubview(transformButton)
-        view.addSubview(springButton)
-        view.addSubview(purpleView)
+        addSubviews()
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,10 +78,27 @@ class ViewAnimationController: UIViewController {
         } else if button == self.transformButton {
             transformAnimation()
 
-        } else {
+        } else if button == self.springButton {
             springAnimation()
 
+        } else {
+            transitionAnimation()
         }
+    }
+    
+    // MARK: - Private Method
+    private func addSubviews() {
+        view.addSubview(moveButton)
+        view.addSubview(colorButton)
+        view.addSubview(transformButton)
+        view.addSubview(springButton)
+        view.addSubview(transitionButton)
+        view.addSubview(purpleView)
+        
+        transitionNewView = UIView()
+        transitionNewView.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
+        transitionNewView.backgroundColor = UIColor.gray
+        view.addSubview(transitionNewView)
     }
     
     private func moveAnimation() {
@@ -89,10 +111,8 @@ class ViewAnimationController: UIViewController {
 //        UIView.animate(withDuration: 2, animations: {
 //            self.purpleView.center = CGPoint(x: 200, y: 255)
 //            
-//        }, completion: { completed in
-//            if completed {
-//                print("动画完成")
-//            }
+//        }, completion: {_ in
+//            print("动画完成")
 //        })
         
         // 第三种
@@ -121,6 +141,18 @@ class ViewAnimationController: UIViewController {
         // Velocity：控制的初始速度，范围也是0.0~1.0。越接近0.0，初始速度越大；越接近1.0，初始速度越小
         UIView.animate(withDuration: 3, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 1, options: [], animations: {
             self.purpleView.center = CGPoint(x: 200, y: 300)
+        }, completion: nil)
+    }
+    
+    private func transitionAnimation() {
+        let newView = UIView()
+        newView.frame = purpleView.bounds
+        newView.backgroundColor = UIColor.red
+        purpleView.addSubview(newView)
+
+        // 参数一：是containerView
+        UIView.transition(with: purpleView, duration: 5, options: [.curveEaseInOut, .transitionFlipFromTop], animations: {
+            self.purpleView.addSubview(newView)
         }, completion: nil)
     }
     
