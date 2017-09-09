@@ -50,8 +50,11 @@ class ViewAnimationController: UIViewController {
         return transitionButton
     }()
     
-    var transitionNewView: UIView!
-    
+    private lazy var keyFrameButton: UIButton = {
+        let keyFrameButton = self.createButton("keyframe")
+        keyFrameButton.frame = CGRect(x: self.transitionButton.frame.maxX + 10, y: self.springButton.frame.origin.y, width: 80, height: 40)
+        return keyFrameButton
+    }()
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -81,8 +84,11 @@ class ViewAnimationController: UIViewController {
         } else if button == self.springButton {
             springAnimation()
 
-        } else {
+        } else if button == self.transitionButton {
             transitionAnimation()
+
+        } else {
+            keyFrameAnimation()
         }
     }
     
@@ -93,12 +99,8 @@ class ViewAnimationController: UIViewController {
         view.addSubview(transformButton)
         view.addSubview(springButton)
         view.addSubview(transitionButton)
+        view.addSubview(keyFrameButton)
         view.addSubview(purpleView)
-        
-        transitionNewView = UIView()
-        transitionNewView.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
-        transitionNewView.backgroundColor = UIColor.gray
-        view.addSubview(transitionNewView)
     }
     
     private func moveAnimation() {
@@ -153,6 +155,35 @@ class ViewAnimationController: UIViewController {
         // 参数一：是containerView
         UIView.transition(with: purpleView, duration: 5, options: [.curveEaseInOut, .transitionFlipFromTop], animations: {
             self.purpleView.addSubview(newView)
+        }, completion: nil)
+    }
+    
+    private func keyFrameAnimation() {
+        
+        UIView.animateKeyframes(withDuration: 2, delay: 0, options: [], animations: {
+            
+            let orginCenter = self.purpleView.center
+            
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: { 
+                self.purpleView.center = CGPoint(x: 50, y: 50)
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.1, relativeDuration: 0.5, animations: {
+                self.purpleView.transform = CGAffineTransform(rotationAngle: .pi / 10)
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.15, relativeDuration: 0.5, animations: {
+                self.purpleView.center.x += 200
+                self.purpleView.center.y += 200
+                
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.5, animations: { 
+                self.purpleView.center = orginCenter
+                self.purpleView.transform = .identity
+            })
+            
+            
         }, completion: nil)
     }
     
