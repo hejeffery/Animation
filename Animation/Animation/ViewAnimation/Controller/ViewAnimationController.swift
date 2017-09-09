@@ -160,10 +160,12 @@ class ViewAnimationController: UIViewController {
     
     private func keyFrameAnimation() {
         
+        // 关键帧动画，总时间是2秒钟
         UIView.animateKeyframes(withDuration: 2, delay: 0, options: [], animations: {
-            
             let orginCenter = self.purpleView.center
             
+            // 添加关键帧，第一个参数：开始时间；第二个参数：持续时间。
+            // 这两个参数都是动画持续的总时间的百分比。0.25就是 2 * 0.25 = 0.5，也就是说该关键帧持续0.5秒
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: { 
                 self.purpleView.center = CGPoint(x: 50, y: 50)
             })
