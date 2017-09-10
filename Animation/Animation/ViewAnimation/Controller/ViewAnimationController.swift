@@ -147,6 +147,7 @@ class ViewAnimationController: UIViewController {
     }
     
     private func transitionAnimation() {
+        // transition的动画也可以用在非动画属性上
         let newView = UIView()
         newView.frame = purpleView.bounds
         newView.backgroundColor = UIColor.red
