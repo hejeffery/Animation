@@ -1,23 +1,22 @@
 //
-//  LayerAnimationController.swift
+//  AutoLayoutAnimationController.swift
 //  Animation
 //
-//  Created by jhe.jeffery on 2017/9/7.
+//  Created by jhe.jeffery on 2017/9/13.
 //  Copyright © 2017年 JefferyHe. All rights reserved.
 //
 
 import UIKit
 
 /**
- Layer的动画，Core Animation
+ AutoLayout的动画
  */
-class LayerAnimationController: UIViewController {
+class AutoLayoutAnimationController: UIViewController {
 
-    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Layer Animation"
+        title = "AutoLayout Animation"
         view.backgroundColor = UIColor.white
     }
 

@@ -10,6 +10,12 @@
 	</dict>
 	<dict>
 		<key>title</key>
+		<string>AutoLayout Animation</string>
+		<key>controller</key>
+		<string>AutoLayoutAnimationController</string>
+	</dict>
+	<dict>
+		<key>title</key>
 		<string>Layer Animation</string>
 		<key>controller</key>
 		<string>LayerAnimationController</string>

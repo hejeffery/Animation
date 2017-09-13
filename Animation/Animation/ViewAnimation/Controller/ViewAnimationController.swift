@@ -60,6 +60,7 @@ class ViewAnimationController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "View Animation"
         navigationController?.navigationBar.isTranslucent = false
         view.backgroundColor = UIColor.white
         
@@ -167,25 +168,28 @@ class ViewAnimationController: UIViewController {
             
             // 添加关键帧，第一个参数：开始时间；第二个参数：持续时间。
             // 这两个参数都是动画持续的总时间的百分比。0.25就是 2 * 0.25 = 0.5，也就是说该关键帧持续0.5秒
+            // 该帧动画：从0秒开始，持续0.5秒
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: { 
                 self.purpleView.center = CGPoint(x: 50, y: 50)
             })
             
+            // 该帧动画：从0.1秒开始，持续1秒
             UIView.addKeyframe(withRelativeStartTime: 0.1, relativeDuration: 0.5, animations: {
                 self.purpleView.transform = CGAffineTransform(rotationAngle: .pi / 10)
             })
             
+            // 该帧动画：从0.15秒开始，持续1秒
             UIView.addKeyframe(withRelativeStartTime: 0.15, relativeDuration: 0.5, animations: {
                 self.purpleView.center.x += 200
                 self.purpleView.center.y += 200
                 
             })
             
+            // 该帧动画：从0.75秒开始，持续1秒
             UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.5, animations: { 
                 self.purpleView.center = orginCenter
                 self.purpleView.transform = .identity
             })
-            
             
         }, completion: nil)
     }
