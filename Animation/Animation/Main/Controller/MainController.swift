@@ -14,7 +14,7 @@ import UIKit
 class MainController: UIViewController {
     
     // MARK: - Init
-    lazy var datas: [Item] = {
+    fileprivate lazy var datas: [Item] = {
         var datas: [Item] = []
         let path = Bundle.main.path(forResource: "Main.plist", ofType: nil)
         guard let filePath = path else {
@@ -78,7 +78,14 @@ extension MainController: UITableViewDelegate {
         let item = datas[indexPath.row]
         let appName = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String
         let className = appName + "." + item.controller!
-        let viewControllerClass = NSClassFromString(className) as! UIViewController.Type
-        self.navigationController?.pushViewController(viewControllerClass.init(), animated: true)
+        
+        if item.controller! == "AutoLayoutAnimationController" {
+            let autoLayoutAnimationController = AutoLayoutAnimationController(nibName: "AutoLayoutAnimationController", bundle: nil)
+            self.navigationController?.pushViewController(autoLayoutAnimationController, animated: true)
+            
+        } else {
+            let viewControllerClass = NSClassFromString(className) as! UIViewController.Type
+            self.navigationController?.pushViewController(viewControllerClass.init(), animated: true)
+        }
     }
 }
