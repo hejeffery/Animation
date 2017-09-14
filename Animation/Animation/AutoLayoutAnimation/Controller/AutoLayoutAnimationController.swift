@@ -36,7 +36,9 @@ class AutoLayoutAnimationController: UIViewController {
         self.topConstraint.constant = 200
         self.leftConstraint.constant = 200
 
-        UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0, options: [.curveEaseInOut], animations: { 
+        UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0, options: [.curveEaseInOut], animations: {
+            
+            // 必须要掉用layoutIfNeeded
             self.view.layoutIfNeeded()
         }, completion: nil)
     }
