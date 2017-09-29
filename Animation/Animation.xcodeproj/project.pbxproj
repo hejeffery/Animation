@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		476839DD1F7E85550013FCD5 /* GradientLayerAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476839DC1F7E85550013FCD5 /* GradientLayerAnimationController.swift */; };
+		476839DF1F7E89310013FCD5 /* LayerAnimation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 476839DE1F7E89310013FCD5 /* LayerAnimation.plist */; };
 		C14659431F61024F0078525B /* LayerAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14659331F61024F0078525B /* LayerAnimationController.swift */; };
 		C14659441F61024F0078525B /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14659381F61024F0078525B /* MainController.swift */; };
 		C14659451F61024F0078525B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C146593A1F61024F0078525B /* Item.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		476839DC1F7E85550013FCD5 /* GradientLayerAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayerAnimationController.swift; sourceTree = "<group>"; };
+		476839DE1F7E89310013FCD5 /* LayerAnimation.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LayerAnimation.plist; sourceTree = "<group>"; };
 		C14659331F61024F0078525B /* LayerAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerAnimationController.swift; sourceTree = "<group>"; };
 		C14659381F61024F0078525B /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		C146593A1F61024F0078525B /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 		4778B23F1F7D496600FDF6A3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				476839DE1F7E89310013FCD5 /* LayerAnimation.plist */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				C14659331F61024F0078525B /* LayerAnimationController.swift */,
+				476839DC1F7E85550013FCD5 /* GradientLayerAnimationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1957A6C1F60D419008D2E66 /* Assets.xcassets in Resources */,
+				476839DF1F7E89310013FCD5 /* LayerAnimation.plist in Resources */,
 				C1957A6F1F60D419008D2E66 /* LaunchScreen.storyboard in Resources */,
 				C14659461F61024F0078525B /* Main.plist in Resources */,
 				C153691E1F6A2974006804A2 /* AutoLayoutAnimationController.xib in Resources */,
@@ -285,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				476839DD1F7E85550013FCD5 /* GradientLayerAnimationController.swift in Sources */,
 				C14659451F61024F0078525B /* Item.swift in Sources */,
 				C14659431F61024F0078525B /* LayerAnimationController.swift in Sources */,
 				C14659441F61024F0078525B /* MainController.swift in Sources */,
