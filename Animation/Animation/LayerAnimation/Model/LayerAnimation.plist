@@ -8,5 +8,11 @@
 		<key>controller</key>
 		<string>GradientLayerAnimationController</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>Shape Layer AnimationController</string>
+		<key>controller</key>
+		<string>ShapeLayerAnimationController</string>
+	</dict>
 </array>
 </plist>

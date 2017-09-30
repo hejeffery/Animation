@@ -22,6 +22,7 @@ class GradientLayerAnimationController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "GradientLayer Animation"
         view.backgroundColor = UIColor.white
         view.addSubview(gradientView)
     }

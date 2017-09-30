@@ -16,6 +16,8 @@
 		C14659461F61024F0078525B /* Main.plist in Resources */ = {isa = PBXBuildFile; fileRef = C146593B1F61024F0078525B /* Main.plist */; };
 		C14659471F61024F0078525B /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C146593D1F61024F0078525B /* MainTableViewCell.swift */; };
 		C14659481F61024F0078525B /* ViewAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14659401F61024F0078525B /* ViewAnimationController.swift */; };
+		C1528CAA1F7F67A800E1A9DD /* ShapeLayerAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1528CA91F7F67A800E1A9DD /* ShapeLayerAnimationController.swift */; };
+		C1528CAC1F7F67EB00E1A9DD /* ShapeLayerAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1528CAB1F7F67EB00E1A9DD /* ShapeLayerAnimationView.swift */; };
 		C153691D1F6A2974006804A2 /* AutoLayoutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153691B1F6A2974006804A2 /* AutoLayoutAnimationController.swift */; };
 		C153691E1F6A2974006804A2 /* AutoLayoutAnimationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C153691C1F6A2974006804A2 /* AutoLayoutAnimationController.xib */; };
 		C1957A6A1F60D419008D2E66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1957A691F60D419008D2E66 /* AppDelegate.swift */; };
@@ -33,6 +35,8 @@
 		C146593B1F61024F0078525B /* Main.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Main.plist; sourceTree = "<group>"; };
 		C146593D1F61024F0078525B /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		C14659401F61024F0078525B /* ViewAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimationController.swift; sourceTree = "<group>"; };
+		C1528CA91F7F67A800E1A9DD /* ShapeLayerAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeLayerAnimationController.swift; sourceTree = "<group>"; };
+		C1528CAB1F7F67EB00E1A9DD /* ShapeLayerAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeLayerAnimationView.swift; sourceTree = "<group>"; };
 		C153691B1F6A2974006804A2 /* AutoLayoutAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutAnimationController.swift; sourceTree = "<group>"; };
 		C153691C1F6A2974006804A2 /* AutoLayoutAnimationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoLayoutAnimationController.xib; sourceTree = "<group>"; };
 		C1957A661F60D419008D2E66 /* Animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				C13B1F501F7F3D5A00204820 /* GradientLayerAnimationView.swift */,
+				C1528CAB1F7F67EB00E1A9DD /* ShapeLayerAnimationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 			children = (
 				C14659331F61024F0078525B /* LayerAnimationController.swift */,
 				476839DC1F7E85550013FCD5 /* GradientLayerAnimationController.swift */,
+				C1528CA91F7F67A800E1A9DD /* ShapeLayerAnimationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -295,10 +301,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1528CAC1F7F67EB00E1A9DD /* ShapeLayerAnimationView.swift in Sources */,
 				476839DD1F7E85550013FCD5 /* GradientLayerAnimationController.swift in Sources */,
 				C14659451F61024F0078525B /* Item.swift in Sources */,
 				C14659431F61024F0078525B /* LayerAnimationController.swift in Sources */,
 				C14659441F61024F0078525B /* MainController.swift in Sources */,
+				C1528CAA1F7F67A800E1A9DD /* ShapeLayerAnimationController.swift in Sources */,
 				C13B1F511F7F3D5A00204820 /* GradientLayerAnimationView.swift in Sources */,
 				C153691D1F6A2974006804A2 /* AutoLayoutAnimationController.swift in Sources */,
 				C1957A6A1F60D419008D2E66 /* AppDelegate.swift in Sources */,
