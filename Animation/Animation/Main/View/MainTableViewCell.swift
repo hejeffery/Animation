@@ -36,7 +36,6 @@ class MainTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         let marginX: CGFloat = 15.0
         let titleLabelX = marginX
         let titleLabelY: CGFloat = 0.0
