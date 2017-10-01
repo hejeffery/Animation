@@ -69,8 +69,6 @@ class GradientLayerAnimationView: UIView {
         let gradientLayerH = bounds.height
         gradientLayer.frame = CGRect(x: gradientLayerX, y: gradientLayerY, width: gradientLayerW, height: gradientLayerH)
         gradientLayer.mask = maskLayer
-        
-        
     }
     
     func setup() {
