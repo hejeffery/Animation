@@ -29,13 +29,13 @@ class GradientLayerAnimationView: UIView {
         return gradientAnimation;
     }()
     
-    private lazy var maskLayer: CALayer = {
-        let textAttributes: [String: AnyObject] = {
+    private lazy var maskLayer: CALayer = {    
+        let textAttributes: [NSAttributedStringKey: AnyObject] = {
             let style = NSMutableParagraphStyle()
             style.alignment = .center
             return [
-                NSFontAttributeName: UIFont.systemFont(ofSize: 25),
-                NSParagraphStyleAttributeName: style
+                NSAttributedStringKey.font: UIFont.systemFont(ofSize: 25),
+                NSAttributedStringKey.paragraphStyle: style
             ]
         }()
 
