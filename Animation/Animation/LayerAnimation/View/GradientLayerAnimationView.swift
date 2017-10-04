@@ -26,6 +26,7 @@ class GradientLayerAnimationView: UIView {
         gradientAnimation.fromValue = [0, 0, 0.25]
         gradientAnimation.toValue = [0.75, 1, 1]
         gradientAnimation.duration = 3
+        gradientAnimation.isRemovedOnCompletion = false
         return gradientAnimation;
     }()
     

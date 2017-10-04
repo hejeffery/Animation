@@ -31,6 +31,7 @@ class ShapeLayerAnimationView: UIView {
         shapeAnimation.toValue = 1
         shapeAnimation.duration = 2
         shapeAnimation.repeatCount = Float.infinity
+        shapeAnimation.isRemovedOnCompletion = false
         return shapeAnimation
     }()
 
