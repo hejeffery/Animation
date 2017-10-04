@@ -14,5 +14,11 @@
 		<key>controller</key>
 		<string>ShapeLayerAnimationController</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>ReplicatorLayer Layer AnimationController</string>
+		<key>controller</key>
+		<string>ReplicatorLayerAnimationController</string>
+	</dict>
 </array>
 </plist>
