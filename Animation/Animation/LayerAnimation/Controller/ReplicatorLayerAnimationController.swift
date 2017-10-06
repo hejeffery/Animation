@@ -13,15 +13,22 @@ class ReplicatorLayerAnimationController: UIViewController {
     private lazy var volumeView: VolumeView = {
         let volumeView = VolumeView()
         volumeView.frame = CGRect.zero
-        volumeView.center = self.view.center
+        volumeView.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 200)
         return volumeView
     }()
     
     private lazy var progressView: ProgressView = {
         let progressView = ProgressView()
         progressView.frame = CGRect.zero
-        progressView.center = CGPoint(x: self.volumeView.center.x, y: self.volumeView.center.y + 200)
+        progressView.center = self.view.center
         return progressView
+    }()
+    
+    private lazy var pulseView: PulseView = {
+        let pulseView = PulseView()
+        pulseView.frame = CGRect.zero
+        pulseView.center = CGPoint(x: self.view.center.x, y: self.view.center.y + 200)
+        return pulseView
     }()
 
     override func viewDidLoad() {
@@ -30,6 +37,7 @@ class ReplicatorLayerAnimationController: UIViewController {
         view.backgroundColor = UIColor.white
         view.addSubview(volumeView)
         view.addSubview(progressView)
+        view.addSubview(pulseView)
     }
 
     override func didReceiveMemoryWarning() {

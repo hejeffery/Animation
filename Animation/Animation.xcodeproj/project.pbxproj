@@ -10,6 +10,7 @@
 		470809721F83B3450031E42E /* ReplicatorLayerAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470809711F83B3450031E42E /* ReplicatorLayerAnimationController.swift */; };
 		470809741F83B4ED0031E42E /* VolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470809731F83B4ED0031E42E /* VolumeView.swift */; };
 		470809761F8457AD0031E42E /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470809751F8457AD0031E42E /* ProgressView.swift */; };
+		470809A31F8771470031E42E /* PulseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470809A21F8771470031E42E /* PulseView.swift */; };
 		476839DD1F7E85550013FCD5 /* GradientLayerAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476839DC1F7E85550013FCD5 /* GradientLayerAnimationController.swift */; };
 		476839DF1F7E89310013FCD5 /* LayerAnimation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 476839DE1F7E89310013FCD5 /* LayerAnimation.plist */; };
 		C13B1F511F7F3D5A00204820 /* GradientLayerAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13B1F501F7F3D5A00204820 /* GradientLayerAnimationView.swift */; };
@@ -32,6 +33,7 @@
 		470809711F83B3450031E42E /* ReplicatorLayerAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicatorLayerAnimationController.swift; sourceTree = "<group>"; };
 		470809731F83B4ED0031E42E /* VolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeView.swift; sourceTree = "<group>"; };
 		470809751F8457AD0031E42E /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		470809A21F8771470031E42E /* PulseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseView.swift; sourceTree = "<group>"; };
 		476839DC1F7E85550013FCD5 /* GradientLayerAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayerAnimationController.swift; sourceTree = "<group>"; };
 		476839DE1F7E89310013FCD5 /* LayerAnimation.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LayerAnimation.plist; sourceTree = "<group>"; };
 		C13B1F501F7F3D5A00204820 /* GradientLayerAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayerAnimationView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				C1528CAB1F7F67EB00E1A9DD /* ShapeLayerAnimationView.swift */,
 				470809731F83B4ED0031E42E /* VolumeView.swift */,
 				470809751F8457AD0031E42E /* ProgressView.swift */,
+				470809A21F8771470031E42E /* PulseView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				470809761F8457AD0031E42E /* ProgressView.swift in Sources */,
 				C14659471F61024F0078525B /* MainTableViewCell.swift in Sources */,
 				C14659481F61024F0078525B /* ViewAnimationController.swift in Sources */,
+				470809A31F8771470031E42E /* PulseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
