@@ -10,7 +10,7 @@ import UIKit
 
 class PulseView: UIView {
     
-    private let viewWH: CGFloat = 200
+    fileprivate let viewWH: CGFloat = 200
     
     private lazy var groupAnimation: CAAnimationGroup = {
         let groupAnimation = CAAnimationGroup()

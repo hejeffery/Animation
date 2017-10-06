@@ -10,6 +10,8 @@ import UIKit
 
 class ProgressView: UIView {
     
+    fileprivate let viewWH: CGFloat = 100
+    
     private lazy var animationGroup: CAAnimationGroup = {
         let animationGroup = CAAnimationGroup()
         animationGroup.duration = 1.0
@@ -69,8 +71,8 @@ class ProgressView: UIView {
     override var frame: CGRect {
         set {
             var newFrame = newValue
-            newFrame.size.width = 100
-            newFrame.size.height = 100
+            newFrame.size.width = viewWH
+            newFrame.size.height = viewWH
             super.frame = newFrame
         }
         

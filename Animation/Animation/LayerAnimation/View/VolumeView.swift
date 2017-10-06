@@ -10,13 +10,16 @@ import UIKit
 
 class VolumeView: UIView {
     
+    fileprivate let viewH: CGFloat = 60
+    fileprivate let viewW: CGFloat = 116
+    
     private lazy var rectLayer: CALayer = {
         let rectLayer = CALayer()
-        rectLayer.frame = CGRect(x: 0, y: 0, width: 20, height: 60)
+        rectLayer.frame = CGRect(x: 0, y: 0, width: 20, height: viewH)
         // 调整anchor point
         rectLayer.anchorPoint = CGPoint(x: 0.5, y: 1)
         // 校正position
-        rectLayer.position = CGPoint(x: 10, y: 60)
+        rectLayer.position = CGPoint(x: 10, y: viewH)
         rectLayer.backgroundColor = UIColor.red.cgColor
         return rectLayer
     }()
@@ -69,8 +72,8 @@ class VolumeView: UIView {
     override var frame: CGRect {
         set {
             var newFrame = newValue
-            newFrame.size.width = 116
-            newFrame.size.height = 60
+            newFrame.size.width = viewW
+            newFrame.size.height = viewH
             super.frame = newFrame
         }
         
