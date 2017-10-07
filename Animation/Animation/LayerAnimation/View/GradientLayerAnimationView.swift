@@ -42,7 +42,7 @@ class GradientLayerAnimationView: UIView {
 
         let maskLayer = CALayer()
         let text = "Jeffery He"
-        let image = UIGraphicsImageRenderer(size: self.bounds.size).image{
+        let image = UIGraphicsImageRenderer(size: self.bounds.size).image {
             _ in
             text.draw(in: self.bounds, withAttributes: textAttributes)
         }

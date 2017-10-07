@@ -10,16 +10,18 @@ import UIKit
 
 class ShapeLayerAnimationView: UIView {
     
+    fileprivate let viewWH: CGFloat = 150
+    
     private lazy var shapeLayer: CAShapeLayer = {
         let shapeLayer = CAShapeLayer()
-        shapeLayer.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
+        shapeLayer.frame = CGRect(x: 0, y: 0, width: viewWH, height: viewWH)
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeColor = UIColor.orange.cgColor
         shapeLayer.lineWidth = 10
         shapeLayer.lineDashPattern = [3, 6]
         let shapeWH: CGFloat = 65
-        shapeLayer.path = UIBezierPath(ovalIn: CGRect(x: (150 * 0.5) - shapeWH,
-                                                      y: (150 * 0.5) - shapeWH,
+        shapeLayer.path = UIBezierPath(ovalIn: CGRect(x: (viewWH * 0.5) - shapeWH,
+                                                      y: (viewWH * 0.5) - shapeWH,
                                                       width: shapeWH * 2,
                                                       height: shapeWH * 2)).cgPath
         return shapeLayer
@@ -48,8 +50,8 @@ class ShapeLayerAnimationView: UIView {
     override var frame: CGRect {
         set {
             var newFrame = newValue
-            newFrame.size.width = 150
-            newFrame.size.height = 150
+            newFrame.size.width = viewWH
+            newFrame.size.height = viewWH
             super.frame = newFrame
         }
         
